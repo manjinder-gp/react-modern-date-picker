@@ -46,9 +46,9 @@ const Calendar = ({
       if (key === 'Tab') calendarElement.current.classList.remove('-noFocusOutline');
     };
     calendarElement.current.addEventListener('keyup', handleKeyUp, false);
-    return () => {
-      calendarElement.current.removeEventListener('keyup', handleKeyUp, false);
-    };
+    // return () => {
+    //   calendarElement.current.removeEventListener('keyup', handleKeyUp, false);
+    // };
   });
 
   const { getToday } = useLocaleUtils(locale);
@@ -80,7 +80,7 @@ const Calendar = ({
     </abbr>
   ));
 
-  const handleMonthChange = direction => {
+  const handleMonthChange = (direction, date) => {
     setMainState({
       ...mainState,
       monthChangeDirection: direction,
