@@ -129,10 +129,10 @@ const Header = ({
         {...hiddenStatus}
       >
         <button
-          onClick={() => {
-            onMonthSelect();
-            onChangeMonth(activeDate, directionArrow);
-          }}
+          // onClick={() => {
+          //   onMonthSelect();
+          //   onChangeMonth(activeDate, directionArrow);
+          // }}
           type="button"
           className="Calendar__monthText"
           aria-label={isMonthSelectorOpen ? closeMonthSelector : openMonthSelector}
@@ -142,10 +142,10 @@ const Header = ({
           {month}
         </button>
         <button
-          onClick={() => {
-            onYearSelect();
-            onChangeMonth(activeDate, directionArrow);
-          }}
+          // onClick={() => {
+          //   onYearSelect();
+          //   onChangeMonth(activeDate, directionArrow);
+          // }}
           type="button"
           className="Calendar__yearText"
           aria-label={isYearSelectorOpen ? closeYearSelector : openYearSelector}
@@ -163,7 +163,7 @@ const Header = ({
         className="Calendar__monthArrowWrapper -right"
         onClick={() => {
           onMonthChangeTrigger('PREVIOUS');
-          onChangeMonth(activeDate, directionArrow);
+          onChangeMonth(activeDate, 'PREVIOUS');
         }}
         aria-label={previousMonth}
         type="button"
@@ -183,7 +183,7 @@ const Header = ({
         className="Calendar__monthArrowWrapper -left"
         onClick={() => {
           onMonthChangeTrigger('NEXT');
-          onChangeMonth(activeDate, directionArrow);
+          onChangeMonth(activeDate, 'NEXT');
         }}
         aria-label={nextMonth}
         type="button"
